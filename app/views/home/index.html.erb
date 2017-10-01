@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col l6 s12">
+    <div class="card-panel">
+      <span class="panel-heading"> About Me</span>
+      <div class="line teal lighten-2"> </div>
+      <div>
+        <img class="my-avatar" src="https://avatars3.githubusercontent.com/u/23452546?v=4" alt="raphaelakpan" width="22%" class="circle">
+        <p>Hi there! It's Raphael Akpan here. I am a Software Developer with Andela. </p>
+        <p>I work majorly with: <span class="highlight"> Ruby/Ruby-on-Rails </span> and <span class="highlight"> NodeJs </span>
+        as my preferred backend Technologies.</p>
+        <p>I also work with <span class="highlight"> ReactJs </span> and <span class="highlight"> VueJs </span> as my preferred frontend Technologies</p>
+        <p>Once in a while, I write about things I'm learning and let others share in the learning process </p>
+        <p>Check out the things I've built and written also </p>
+      </div>
+      <div class="line teal lighten-2"> </div>
+      <%= link_to "Contact Me", root_path, class: "waves-effect waves-light btn" %>
+    </div>
+  </div>
+  <div class="col l6 s12">
+    <div class="card-panel">
+      <span class="panel-heading"> What I've Written</span>
+      <div class="line teal lighten-2"> </div>
+      <p> Check out my latest articles.. </p>
+      <ul class="collection">
+        <% @posts.each do |post| %>
+          <li class="collection-item">
+            <span class="secondary-content">
+              <i class="material-icons starred">grade</i>
+              <i class="material-icons starred">grade</i>
+              <i class="material-icons starred">grade</i>
+              <i class="material-icons starred">grade</i>
+              <i class="material-icons">grade</i>
+            </span>
+            <h5> <%= link_to post.title, post %> </h5>
+            <span> <%= post.created_at.strftime("%A %b %d, %Y") %> </span>
+          </li>
+        <% end %>
+      </ul>
+      <div class="line teal lighten-2"> </div>
+      <%= link_to "View More...", posts_path, class: "waves-effect waves-light btn" %>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="card-panel">
+    <div>
+      <span class="panel-heading"> What I've built </span>
+      <div class="line teal lighten-2"> </div>
+    </div>
+    <div class="row">
+      <div class="col l4 s6">
+        <div class="card-image">
+          <img src="http://www.freepngimg.com/download/youtube/10-2-youtube-png-clipart.png" width="100%">
+          <h3 class="center text--blue">YouTube</h3>
+        </div>
+        <div class="card-content">
+          <p>
+            YouTube is an American video-sharing website headquartered in San Bruno, California. The service was created by three former PayPal employees — Chad Hurley, Steve Chen, and Jawed Karim — in February 2005.
+          </p>
+          <p>YouTube allows users to upload, view, rate, share, add to favorites, report, comment on videos, and subscribe to other users. </p>
+        </div>
+        <%= link_to "Visit Site", "https://www.youtube.com", target: "_blank" %>
+      </div>
+      <div class="col l4 s6">
+        <div class="card-image">
+          <img src="https://crazy4comiccon.files.wordpress.com/2015/06/twitter-bird-with-megaphone.jpg" width="100%">
+          <h3 class="center text--blue">Twitter</h3>
+        </div>
+        <div class="card-content">
+          <p>
+            YouTube is an American video-sharing website headquartered in San Bruno, California. The service was created by three former PayPal employees — Chad Hurley, Steve Chen, and Jawed Karim — in February 2005.
+          </p>
+          <p>YouTube allows users to upload, view, rate, share, add to favorites, report, comment on videos, and subscribe to other users. </p>
+        </div>
+        <%= link_to "Visit Site", "https://www.twitter.com", target: "_blank" %>
+      </div>
+      <div class="col l4 s6">
+        <div class="card-image">
+          <img src="http://www.yavuzotomotivgolcuk.com/images/facebook-splat-f-logo-transparent-28.png" width="100%">
+          <h3 class="center text--blue">Facebook</h3>
+        </div>
+        <div class="card-content">
+          <p>
+            YouTube is an American video-sharing website headquartered in San Bruno, California. The service was created by three former PayPal employees — Chad Hurley, Steve Chen, and Jawed Karim — in February 2005.
+          </p>
+          <p>YouTube allows users to upload, view, rate, share, add to favorites, report, comment on videos, and subscribe to other users. </p>
+        </div>
+        <%= link_to "Visit Site", "https://www.facebook.com", target: "_blank" %>
+      </div>
+    </div>
+  </div>
+</div>
+

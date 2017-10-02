@@ -54,6 +54,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    friendly_id (5.2.3)
+      activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -181,6 +183,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  friendly_id (~> 5.2, >= 5.2.3)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -201,7 +204,7 @@ DEPENDENCIES
   webpacker (~> 3.0)
 
 RUBY VERSION
-   ruby 2.4.2p198
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.15.4

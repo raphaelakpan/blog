@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.2'
-
 gem 'rails', '~> 5.0.5'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
@@ -20,6 +18,7 @@ gem 'webpacker', '~> 3.0'
 gem 'materialize-sass'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.4'
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri

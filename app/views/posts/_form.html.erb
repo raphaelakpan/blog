@@ -10,8 +10,8 @@
   <%= f.text_field :title %> <br>
   <br>
   <%= f.label :content, "Write your article" %> <br>
-  <%= f.text_area :content %> <br>
+  <%= f.text_area :content, class: "materialize-textarea", style: "height: 30rem; overflow: scroll" %> <br>
   <br>
-  <%= f.submit%>
+  <%= f.submit class: "btn" %>
 
 <% end %>

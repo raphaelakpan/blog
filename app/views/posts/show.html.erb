@@ -1,11 +1,15 @@
 <div class="container">
   <div class="card-panel">
+    <div>
+      <a href='<%="/posts/#{@post.id}/edit" %>' class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+      <a href='<%="/posts/#{@post.id}" %>' data-method="delete" data-confirm="Are you sure?" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
+    </div>
     <div class="flex-center">
       <span class="date"> <%= @post.created_at.strftime("%A %b %d, %Y") %> </span>
       <h3> <%= @post.title %> </h3>
       <div class="line teal lighten-2"> </div>
     </div>
-    <p> <%= @post.content %> </p>
+    <div> <%= markdown @post.content %> </div>
 
     <div class="flex-center social">
       <div class="line teal lighten-2"> </div>
@@ -22,7 +26,5 @@
       <div class="line teal lighten-2"> </div>
     </div>
 
-    <%= link_to "Edit", edit_post_path(@post), class: "btn blue" %>
-    <%= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: "btn red" %>
   </div>
 </div>

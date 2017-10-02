@@ -1,3 +1,20 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3, h4, h5 {
+    margin: 10px;
+  }
+}
+
+.social {
+  a {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+}

@@ -32,7 +32,7 @@
               <i class="material-icons">grade</i>
             </span>
             <h5> <%= link_to post.title, post %> </h5>
-            <span> <%= post.created_at.strftime("%A %b %d, %Y") %> </span>
+            <span class="date"> <%= post.created_at.strftime("%A %b %d, %Y") %> </span>
           </li>
         <% end %>
       </ul>

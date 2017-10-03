@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card-panel">
-    <div>
+    <div style="text-align: right">
       <a href='<%= "#{polymorphic_url(@post)}/edit" %>' class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">edit</i></a>
       <a href='<%="#{polymorphic_url(@post)}" %>' data-method="delete" data-confirm="Are you sure?" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
     </div>
@@ -9,7 +9,9 @@
       <h3> <%= @post.title %> </h3>
       <div class="line teal lighten-2"> </div>
     </div>
-    <div> <%= markdown @post.content %> </div>
+    <div class="markdown-section">
+      <%= markdown @post.content %>
+    </div>
 
     <div class="flex-center social">
       <div class="line teal lighten-2"> </div>

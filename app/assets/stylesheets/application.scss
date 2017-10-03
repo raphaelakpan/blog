@@ -42,21 +42,17 @@ main {
 
 .card-panel {
   padding: 20px;
-.panel-heading {
-  font-weight: 500;
-  font-size: x-large;
-}
-.secondary-content {
-  font-size: 0px;
-  .material-icons {
-    font-size: 15px !important
+  .secondary-content {
+    font-size: 0px;
+    .material-icons {
+      font-size: 15px !important
+    }
   }
-}
 
-.highlight {
-  color: $blue;
-  font-weight: 500;
-}
+  .highlight {
+    color: $blue;
+    font-weight: 500;
+  }
 }
 
 .starred {
@@ -86,6 +82,22 @@ color: $blue;
 // Colors
 .text--blue {
   color: $blue;
+}
+
+// Headings
+.heading-one {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.heading-two {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.heading-three {
+  font-weight: 500;
+  font-size: 30px;
 }
 
 //  Index Page

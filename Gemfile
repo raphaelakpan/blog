@@ -19,6 +19,7 @@ gem 'materialize-sass'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.4'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri

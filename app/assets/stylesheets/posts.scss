@@ -21,7 +21,7 @@
 
 .markdown-section {
   img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -38,17 +38,3 @@
   }
 }
 
-.pagination {
-  li {
-    min-width: 35px;
-    a {
-      color: #777 !important;
-    }
-  }
-  .current {
-    background: #666;
-    padding: 0.2rem .8rem;
-    border-radius: 5px;
-    color: #fff;
-  }
-}

@@ -1,0 +1,23 @@
+<%= form_for @project do |f| %>
+  <% if @project.errors.any? %>
+    <h3> <%= pluralize(@project.errors.count, "error") %> occurred </h3>
+    <% @project.errors.full_mesages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end %>
+  <% end %>
+
+  <%= f.label :title %> <br>
+  <%= f.text_field :title %> <br>
+
+  <%= f.label :description, "Project Description" %> <br>
+  <%= f.text_area :description, class: "materialize-textarea", style: "height: 10rem; overflow: scroll" %> <br>
+
+  <%= f.label :link %> <br>
+  <%= f.text_field :link %> <br>
+
+  <%= f.label :image_link %> <br>
+  <%= f.text_field :image_link %> <br>
+
+  <%= f.submit class: "btn" %>
+
+<% end %>

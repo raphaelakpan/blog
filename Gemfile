@@ -20,9 +20,12 @@ gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.4'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'acts-as-taggable-on', '~> 4.0'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry'
 end
 
 group :development do

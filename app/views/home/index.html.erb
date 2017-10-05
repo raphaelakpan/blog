@@ -32,8 +32,11 @@
               <span class="date"> <%= post.created_at.strftime("%A %b %d, %Y") %> </span>
             </div>
             <div style="text-align: right">
-              <div class="chip"> Ruby </div>
+              <% post.tag_list.each do |tag| %>
+                <div class="chip"> <%= tag %> </div>
+              <% end %>
             </div>
+            <div style="clear: both"> </div>
           </li>
         <% end %>
       </ul>

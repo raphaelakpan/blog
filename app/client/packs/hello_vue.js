@@ -30,15 +30,15 @@
 // </div>
 
 
-import Vue from 'vue/dist/vue.esm'
-import App from './app.vue'
+// import Vue from 'vue/dist/vue.esm'
+// import App from './app.vue'
 
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    el: '#app',
-    data: {
-      message: "Can you say hello?"
-    },
-    components: { App }
-  })
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = new Vue({
+//     el: '#app',
+//     data: {
+//       message: "Can you say hello?"
+//     },
+//     components: { App }
+//   })
+// })

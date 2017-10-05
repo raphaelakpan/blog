@@ -24,7 +24,15 @@
     <% @posts.each do |post| %>
       <div class="card-panel">
         <span class="heading-three"> <%= link_to post.title, post %> </span> <br>
-        <small> <span class="date"> <%= post.created_at.strftime("%A %b %d, %Y") %> </span> </small>
+        <div style="float: left">
+          <small> <span class="date"> <%= post.created_at.strftime("%A %b %d, %Y") %> </span> </small>
+        </div>
+        <div style="text-align: right">
+          <% post.tag_list.each do |tag| %>
+            <div class="chip"> <%= tag %> </div>
+          <% end %>
+        </div>
+        <div style="clear: both"> </div>
       </div>
     <% end %>
 

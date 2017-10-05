@@ -1,17 +1,26 @@
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <h3> <%= pluralize(@post.errors.count, "error") %> occurred </h3>
-    <% @post.errors.full_mesages.each do |message| %>
-      <li> <%= message %> </li>
+<div id="post-form">
+  <%= form_for @post do |f| %>
+    <% if @post.errors.any? %>
+      <h3> <%= pluralize(@post.errors.count, "error") %> occurred </h3>
+      <% @post.errors.full_mesages.each do |message| %>
+        <li> <%= message %> </li>
+      <% end %>
     <% end %>
+
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %> <br>
+
+    <% if @post.id %>
+      <tags :id="<%= @post.id  %>"> </tags>
+    <% else %>
+      <tags> </tags>
+    <% end %>
+
+
+    <%= f.label :content, "Write your article" %> <br>
+    <%= f.text_area :content, class: "materialize-textarea", style: "height: 30rem; overflow: scroll" %> <br>
+
+    <%= f.submit class: "btn" %>
+
   <% end %>
-
-  <%= f.label :title %> <br>
-  <%= f.text_field :title %> <br>
-  <br>
-  <%= f.label :content, "Write your article" %> <br>
-  <%= f.text_area :content, class: "materialize-textarea", style: "height: 30rem; overflow: scroll" %> <br>
-  <br>
-  <%= f.submit class: "btn" %>
-
-<% end %>
+</div>

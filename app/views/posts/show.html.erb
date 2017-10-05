@@ -7,6 +7,11 @@
     <div class="flex-center">
       <span class="date"> <%= @post.created_at.strftime("%A %b %d, %Y") %> </span>
       <h3> <%= @post.title %> </h3>
+      <div>
+        <% @post.tag_list.each do |tag| %>
+          <span class="chip"> <%= tag %> </span>
+        <% end %>
+      </div>
       <div class="line teal lighten-2"> </div>
     </div>
     <div class="markdown-section">
